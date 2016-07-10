@@ -1,0 +1,36 @@
+from sys import version_info
+import time
+
+py3 = version_info[0] > 2 #creates boolean value for test that Python major version > 2
+
+if py3:
+        response = input("Please enter your name: ")
+#else:
+#       response = raw_input("Please enter your name: ")
+#Confirm
+print('This algorithm  assumes the target audience of the campaign are teenagers between the ages of 12 to 18')
+confirm = 'Confirm? Type Yes or No in parentheses: '
+question = input(confirm)
+if question == 'Yes'or 'y' or 'yes' or 'YES' or 'Y':
+        print "Let's Continue"
+elif question == 'No'.replace("'",""):
+        print "Well thats what this thing is for"
+elif question == None:
+        print "Please type either 'Yes' or 'No'"
+time.sleep(.5)
+
+#Company title
+title = 'Please enter company or campgaign title: '
+entertitle = raw_input(title)
+print( 'Welcome,' +  entertitle + '!')
+
+time.sleep(.5)
+
+#Mission Statement
+mission = 'Please enter company or campgaign mission statement: '
+entermission = raw_input(mission)
+print( 'You entered' + ' ' +  entermission)
+time.sleep(.5)
+productdict = ['consumer' , 'buy',]
+if entermission in productdict:
+        print('This mission statement identifies the company as selling a tangible product')
